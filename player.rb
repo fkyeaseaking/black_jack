@@ -1,5 +1,5 @@
 class Player
-  attr_accessor :bank
+  attr_accessor :bank, :hand, :name
 
   def initialize(name)
     @name = name

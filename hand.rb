@@ -1,5 +1,5 @@
 class Hand
-  attr_reader :cards
+  attr_accessor :cards
 
   def initialize
     @cards = []
@@ -24,11 +24,6 @@ class Hand
   private
 
   def card_score(card)
-    case card
-    when 2..10
-      card.to_i
-    else
-      10
-    end
+    card.to_i.zero? ? 10 : card.to_i
   end
 end

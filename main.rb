@@ -3,5 +3,6 @@ require_relative "game"
 require_relative "bank"
 require_relative "deck"
 require_relative "hand"
-require_relative "score"
 require_relative "dealer"
+
+Game.new.start

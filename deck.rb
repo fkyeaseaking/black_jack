@@ -12,10 +12,6 @@ class Deck
     @cards.pop
   end
 
-  def shuffle!
-    @cards.shuffle!
-  end
-
   private
 
   def make_deck
