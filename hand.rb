@@ -8,11 +8,11 @@ class Hand
   def calculate!
     card_names = @cards.map { |card| card[0...-1] }
     aces = card_names.select { |card| card == "A" }
-    other_cards = card_names.select { |card| card != "A" }
+    other_cards = card_names.reject { |card| card == "A" }
     score = 0
 
     other_cards.each { |card| score += card_score(card) }
-    aces.each { |i| (score + 11) > 21 ? score += 1 : score += 11 }
+    aces.each { |_i| score += (score + 11) > 21 ? 1 : 11 }
 
     score
   end
